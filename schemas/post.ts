@@ -50,12 +50,28 @@ export const post = {
       ],
     },
     {
+      // Allow images to be added to the body
       name: 'body',
       type: 'array',
       title: 'Body',
       of: [
         {
           type: 'block',
+        },
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+            },
+            {
+              name: 'altText',
+              type: 'string',
+              title: 'Alt text',
+            },
+          ],
         },
       ],
     },
